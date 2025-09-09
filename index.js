@@ -34,7 +34,7 @@ const hubspot = axios.create({
 });
 
 // =====================================================
-// ROUTE 1: Homepage "/" → lista registros de VideoGames
+// ROUTE 1: Homepage "/" → lista registros de Pets
 // =====================================================
 app.get('/', async (req, res) => {
   try {
@@ -56,7 +56,7 @@ app.get('/', async (req, res) => {
     }));
 
     res.render('homepage', {
-      title: 'Video Games List',
+      title: 'Pets List',
       columns: ['Name', 'Type of Pet', 'Genre', 'Age', 'Color'],
       rows
     });
