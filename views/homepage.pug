@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Pets
+    p(style="margin: 1rem")
+      a(href="/update-cobj") Add a new Pet
+
+    if !rows || rows.length === 0
+      p(style="margin: 1rem") No pets yet. Add one!
+    else
+      .table-wrapper
+        table
+          thead
+            tr
+              each col in columns
+                th= col
+          tbody
+            each r in rows
+              tr
+                td= r.pet_name
+                td= r.type_of_pet
+                td= r.genre
+                td= r.age
+                td= r.color

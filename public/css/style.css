@@ -48,6 +48,7 @@ label, input {
 
 input[type="text"] {
     padding: .25rem;
+    width: 100%;
 }
 
 input[type="submit"] {
@@ -55,4 +56,29 @@ input[type="submit"] {
     border: none;
     padding: .375rem 1rem;
     margin-top: 10px;
+}
+
+.table-wrapper {
+  max-width: 1024px;
+  margin: 1rem auto 2rem auto;
+  border: solid 1px rgb(253, 138, 6);
+  border-radius: 10px;
+  box-shadow: 3px 2px 6px rgb(253, 138, 6);
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: .6rem;
+  text-align: left;
+}
+
+th {
+  background: rgb(253, 138, 6);
+  font-weight: 600;
 }

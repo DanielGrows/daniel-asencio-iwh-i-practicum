@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+    p(style="margin: 1rem")
+      a(href="/") Return to homepage
+
+    .form-wrapper
+      form(action="/update-cobj" method="POST")
+        label(for="pet_name") Name
+        input#pet_name(type="text" name="pet_name" required)
+
+        label(for="type_of_pet") Type of Pet
+        input#type_of_pet(type="text" name="type_of_pet" required)
+
+        label(for="genre") Genre
+        input#genre(type="text" name="genre")
+
+        label(for="age") Age
+        input#age(type="text" name="age")
+
+        label(for="color") Color
+        input#color(type="text" name="color")
+
+        input(type="submit" value="Save")
