@@ -62,12 +62,12 @@ app.get('/', async (req, res) => {
     });
   } catch (error) {
     console.error(error?.response?.data || error.message);
-    res.status(500).send('Error loading VideoGames from HubSpot. Revisa tu .env, permisos y objectTypeId.');
+    res.status(500).send('Error loading Pets from HubSpot. Revisa tu .env, permisos y objectTypeId.');
   }
 });
 
 // ====================================================================
-// ROUTE 2: Formulario GET "/update-cobj" → crear nuevo Video Game
+// ROUTE 2: Formulario GET "/update-cobj" → crear nuevo Pet
 // ====================================================================
 app.get('/update-cobj', (req, res) => {
   res.render('updates', {
